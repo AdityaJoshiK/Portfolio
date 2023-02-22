@@ -1,0 +1,25 @@
+﻿@{
+   @* ViewData["Title"] = "Home Page";*@
+    ViewBag.Title = "Sum Page";
+}
+
+<div class="text-left">
+    <h1 class="display-4">Welcome</h1>
+    
+    <div class="col-md-6">
+        <form asp-controller="Home" method="post">
+            <span>Enter 1st number:</span><input id="text1" type="text" class="form-control" name="txtfirst"/>
+            <br/>
+            <span>Enter 2nd number:</span><input id="text2" type="text" class="form-control" name="txtsecond" />
+            <br/>
+            <input id="Submit1" type="submit" value="Add" asp-action="add" class="btn btn-outline-success"/>
+            <input id="Submit2" type="submit" value="Minus" asp-action="minus" class="btn btn-outline-info" />
+            <input id="Submit1" type="submit" value="Mul" asp-action="mul" class="btn btn-outline-success" />
+            <input id="Submit2" type="submit" value="Div" asp-action="div" class="btn btn-outline-info" />
+        </form>
+    </div>
+    <hr/>
+    <h4>Addition is : @ViewBag.SumResult</h4>
+    <h4>Sub is: @ViewBag.MinResult</h4>
+</div>
+            
